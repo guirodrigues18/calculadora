@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cor do fundo*/
+body {
+  background: linear-gradient(to right, #f8efed, #f8c8ed);
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* Cor dos botões*/
+.grid-container > button {
+  cursor: cell;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #e76a31;
+  color: rgb(251, 243, 243);
+}
+
+/* Cor do botão quando clica */
+.grid-container > button:hover {
+  background-color: #ff005b;
+  color: #fcfeac;
+}
+
+
+/* Cor dos operadores */
+.grid-container > .operator {
+  background: #ad3c30;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+/* Cor da operação */
+.grid-container > .output {
+  grid-column: 1 / -1;
+  background: #681f27;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* Cor dos numeros da operação  */
+.grid-container > .output > .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
